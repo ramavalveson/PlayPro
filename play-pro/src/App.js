@@ -1,11 +1,12 @@
-
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <h1>PlayPro</h1>
-      <h2>Ecommerce - Ramiro Valveson</h2>
+      <NavBar />
+      <ItemListContainer title={"Productos Destacados"}/>
     </div>
   );
 }

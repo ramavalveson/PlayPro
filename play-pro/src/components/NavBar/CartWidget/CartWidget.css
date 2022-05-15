@@ -1,0 +1,14 @@
+.cart-icon {
+    color: #fff;
+}
+
+.cart-quantity {
+    color: #fff;
+    background-color: black;
+    border-radius: 100%;
+    padding: 0% 14%;
+    font-size: 0.75rem;
+    position: relative;
+    top: -15px;
+    right: 10px;
+}
