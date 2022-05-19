@@ -1,0 +1,24 @@
+.item-count {
+    width: 15%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: solid 0.1rem #ccc;
+    background-color: rgba(247, 247, 247, 0.75);
+    padding: 2%;
+    border-radius: 2%;
+}
+
+.count-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border: solid 0.1rem #ccc;
+    margin-bottom: 1rem;
+    border-radius: 2%;
+
+}
+
+.count {
+    background-color: #fff;
+}
