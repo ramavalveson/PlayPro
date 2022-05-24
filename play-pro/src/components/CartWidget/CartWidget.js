@@ -4,7 +4,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const CartWidget = () => {
     return (
-        <Button>
+        <Button disableRipple>
             <ShoppingCartIcon className="cart-icon" fontSize="large"/>
             <span className="cart-quantity">0</span>
         </Button>

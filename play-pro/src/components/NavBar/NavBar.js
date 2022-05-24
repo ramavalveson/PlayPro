@@ -1,6 +1,6 @@
 import './NavBar.css';
 import {AppBar, Toolbar, Typography, Button} from '@mui/material'
-import CartWidget from './CartWidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
@@ -14,25 +14,25 @@ const NavBar = () => {
             <div className="links-container">
                 <ul className="links">
                     <li>
-                        <Button variant="text" sx={{ fontSize: 15 }}>Inicio</Button>
+                        <Button disableRipple variant="text" sx={{ fontSize: 15 }}>Inicio</Button>
                     </li>
                     <li>
                         <span>|</span>
                     </li>
                     <li>
-                        <Button variant="text" sx={{ fontSize: 15 }}>Productos</Button>
+                        <Button disableRipple variant="text" sx={{ fontSize: 15 }}>Productos</Button>
                     </li>
                     <li>
                         <span>|</span>
                     </li>
                     <li>
-                        <Button variant="text" sx={{ fontSize: 15 }}>Contacto</Button>
+                        <Button disableRipple variant="text" sx={{ fontSize: 15 }}>Contacto</Button>
                     </li>
                     <li>
                         <span>|</span>
                     </li>
                     <li>
-                        <Button variant="text" sx={{ fontSize: 15 }}>Preguntas Frecuentes</Button>
+                        <Button disableRipple variant="text" sx={{ fontSize: 15 }}>Preguntas Frecuentes</Button>
                     </li>
                 </ul>
             </div>
