@@ -1,10 +1,17 @@
+.item-count {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .count-container {
     display: flex;
     justify-content: space-around;
     background-color: #fff;
     border: solid 0.1rem #ccc;
     border-radius: 2%;
-    width: 60%;
+    width: 80%;
     margin: 1rem auto;
 }
 
