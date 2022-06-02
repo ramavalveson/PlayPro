@@ -1,5 +1,5 @@
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
-const Home = () => <ItemListContainer title={"Productos Destacados"} />
+const Home = () => <ItemListContainer />
 
 export default Home

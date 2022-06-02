@@ -46,14 +46,17 @@ const ItemListContainer = () => {
         })
     }
 
+    const title2 = () => categoryId ? `/ ${categoryId}` : "Destacados"
+
     return (
         <div>
             { loadingProducts ? (
                 <Spinner />
             ):(
-                <ItemList items={products} />
+                    <ItemList title={`Productos ${title2()}`} items={products} />
             )}
         </div>
     )
 }
+
 export default ItemListContainer
