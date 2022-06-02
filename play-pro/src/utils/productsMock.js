@@ -1,6 +1,6 @@
 const productsArray = [
     {id: 1, title: 'Paleta Wilson', category: 'Padel', price: 23000, stock: 5, image: 'https://http2.mlstatic.com/D_NQ_NP_620461-MLA46112543810_052021-O.webp'},
-    {id: 2, title: 'Tubo pelotas x3 Head', category: 'Padel - Tenis', price: 2500, stock: 18, image: 'https://http2.mlstatic.com/D_NQ_NP_929712-MLA48011257223_102021-O.webp'},
+    {id: 2, title: 'Tubo pelotas x3 Head', category: 'Tenis', price: 2500, stock: 18, image: 'https://http2.mlstatic.com/D_NQ_NP_929712-MLA48011257223_102021-O.webp'},
     {id: 3, title: 'Guantes Arquero Reusch', category: 'Futbol', price: 13000, stock: 10, image: 'https://http2.mlstatic.com/D_NQ_NP_879479-MLA49876974887_052022-O.webp'},
     {id: 4, title: 'Raqueta Babolat Aero', category: 'Tenis', price: 105000, stock: 9, image: 'https://http2.mlstatic.com/D_NQ_NP_611920-MLA48936014300_012022-O.webp'},
     {id: 5, title: 'Pelota Nassau N°4', category: 'Futbol', price: 15000, stock: 11, image: 'https://http2.mlstatic.com/D_NQ_NP_789356-MLA48725142862_012022-O.webp'},

@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+.button-detail-view {
+    text-decoration: none;
+    color: rgb(57, 126, 206);
+}
+
 .card-body {
     text-align: center;
     padding: 5% 0 2% 0;

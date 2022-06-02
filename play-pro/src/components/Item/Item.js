@@ -1,12 +1,17 @@
 import './Item.css';
-import { Button } from '@mui/material'
+import { Button } from '@mui/material';
 import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
 
-const Item = ({ title, price, stock, image }) => {
+const Item = ({ id, title, price, stock, image }) => {
     return (
         <div className="card-item">
             <div>
-                <Button variant="text" sx={{fontSize: 12, backgroundColor: 'rgb(247, 247, 247)'}}>Ver Detalle</Button>
+                <Button 
+                    variant="text" 
+                    sx={{fontSize: 12, backgroundColor: 'rgb(247, 247, 247)'}}>
+                    <Link className="button-detail-view" to={`/item/${id}`}>Ver Detalle</Link>    
+                </Button>
             </div>
             <div className="card-body">
                 <img src={image} alt={`Producto ${title}`} />

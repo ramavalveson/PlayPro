@@ -1,5 +1,6 @@
 import './ItemDetail.css';
-import ItemCount from '../ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount';
+import { Rating } from '@mui/material';
 
 const ItemDetail = ({ item }) => {
     const { id, title, category, price, stock, image } = item;
@@ -18,6 +19,7 @@ const ItemDetail = ({ item }) => {
                         <p>Item No. {id}</p>
                     </div>
                     <div className="data-price-detail">
+                        <Rating name="no-value" value={null} />
                         <p>$ {price}</p>
                         <p>3 cuotas de {Math.round(price / 3)}</p>
                     </div>
