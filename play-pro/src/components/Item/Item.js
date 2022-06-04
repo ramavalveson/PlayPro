@@ -19,7 +19,7 @@ const Item = ({ id, title, price, stock, image }) => {
             <div className="card-footer">
                 <p className="card-title">{title}</p>
                 <p className="card-price">${price}</p>
-                <ItemCount stock={stock} initial={1} />
+                <ItemCount stock={stock} />
             </div>
         </div>
     )

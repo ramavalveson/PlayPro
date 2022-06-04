@@ -58,3 +58,13 @@
     width: 60%;
     border-top: solid 0.1rem #ccc;
 }
+
+.finish-purchase-container {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.link-finish-purchase {
+    text-decoration: none;
+    color: #fff;
+}

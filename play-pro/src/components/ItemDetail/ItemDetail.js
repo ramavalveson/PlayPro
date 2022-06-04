@@ -1,9 +1,18 @@
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
-import { Rating } from '@mui/material';
+import { Rating, Button } from '@mui/material';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => {
     const { id, title, category, price, stock, image } = item;
+    const [quantity, setQuantity] = useState(1)
+    const [showCount, setShowCount] = useState(true)
+
+    const onAdd = () => {
+        setShowCount(false)
+    }
+
     return(
         <div className="container-item-detail">
             <div className="img-detail-container">
@@ -25,7 +34,25 @@ const ItemDetail = ({ item }) => {
                     </div>
                 </div>
                 <div className="data-detail-item-count">
-                    <ItemCount stock={stock} initial={1}/>
+                    {showCount ?
+                    <ItemCount 
+                        stock={stock} 
+                        onAdd={onAdd} 
+                        quantity={quantity}
+                        setQuantity={setQuantity}
+                    />
+                    :
+                    <div className="finish-purchase-container">
+                        <Button variant="contained">
+                            <Link 
+                                className="link-finish-purchase" 
+                                to='/cart'
+                            >
+                                Terminar Compra
+                            </Link>
+                        </Button>
+                    </div>
+                    }
                 </div>
             </div>
             
