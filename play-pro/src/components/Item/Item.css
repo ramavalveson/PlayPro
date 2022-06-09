@@ -1,6 +1,7 @@
 .card-item {
     border: solid 0.1rem #ccc;
     padding: 0;
+    height: 565px;
 }
 
 .button-detail-view {
@@ -21,6 +22,7 @@
     text-align: center;
     background-color: rgb(247, 247, 247);
     padding-bottom: 5%;
+    height: 225px;
 }
 
 .card-title {

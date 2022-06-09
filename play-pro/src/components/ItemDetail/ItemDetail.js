@@ -35,11 +35,11 @@ const ItemDetail = ({ item }) => {
                 </div>
                 <div className="data-detail-item-count">
                     {showCount ?
-                    <ItemCount 
-                        stock={stock} 
+                    <ItemCount  
                         onAdd={onAdd} 
                         quantity={quantity}
                         setQuantity={setQuantity}
+                        item={item}
                     />
                     :
                     <div className="finish-purchase-container">

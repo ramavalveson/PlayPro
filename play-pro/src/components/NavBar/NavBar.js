@@ -76,55 +76,6 @@ const NavBar = () => {
                                 )    
                             })}
                         </Menu>
-                        {/* <Button className="button-products" disableRipple variant="text" sx={{ fontSize: 15, color: "black" }}>Productos
-                            <ul className="sub-menu-products">
-                                <li>
-                                    <Button 
-                                        disableRipple 
-                                        variant="text" 
-                                        sx={{ fontSize: 15 }}
-                                    >
-                                        <Link className="button-link" to="/category/Padel">Padel</Link>
-                                    </Button>
-                                </li>
-                                <li>
-                                    <Button 
-                                        disableRipple 
-                                        variant="text" 
-                                        sx={{ fontSize: 15 }}
-                                    >
-                                        <Link className="button-link" to="/category/Futbol">Futbol</Link>
-                                    </Button>
-                                </li>
-                                <li>
-                                    <Button 
-                                        disableRipple 
-                                        variant="text" 
-                                        sx={{ fontSize: 15 }}
-                                    >
-                                        <Link className="button-link" to="/category/Tenis">Tenis</Link>
-                                    </Button>
-                                </li>
-                                <li>
-                                    <Button 
-                                        disableRipple 
-                                        variant="text" 
-                                        sx={{ fontSize: 15 }}
-                                    >
-                                        <Link className="button-link" to="/category/Basquet">Basquet</Link>
-                                    </Button>
-                                </li>
-                                <li>
-                                    <Button 
-                                        disableRipple 
-                                        variant="text" 
-                                        sx={{ fontSize: 15 }}
-                                    >
-                                        <Link className="button-link" to="/category/Voley">Voley</Link>
-                                    </Button>
-                                </li>
-                            </ul>
-                        </Button> */}
                     </li>
                     <li>
                         <span>|</span>
