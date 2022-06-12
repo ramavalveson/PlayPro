@@ -23,54 +23,6 @@
     margin-top: 5%;
 }
 
-.card-of-cart-container {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-    height: 210px;
-    margin: 2% auto;
-    border: solid 0.1rem #ccc;
-    border-radius: 1rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem #ccc;
-}
-
-.img-cart-container {
-    width: 10%;
-    display: flex;
-    align-items: center;
-}
-
-.img-cart-container img {
-    width: 100%;
-}
-
-.item-cart-data-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.item-cart-values-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.quantity-control {
-    display: flex;
-    justify-content: space-around;
-}
-
-.item-cart-data-container h3 {
-    font-size: 1.5rem;
-}
-
-.delete-item-container {
-    display: flex;
-    align-items: center;
-}
-
 .cart-accions-button-container {
     margin: 5% auto 0% auto;
     width: 30%;

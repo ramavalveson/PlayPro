@@ -4,7 +4,7 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 //Firebase 
-import { doc, getDoc, getDocument } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import db from '../../utils/firebaseConfig';
 
 const ItemDetailContainer = () => {

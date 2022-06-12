@@ -7,15 +7,21 @@ const CartProvider = ({children}) => {
 
     const [changeQuantity, setChangeQuantity] = useState(0)
 
+    // const [cartIncludesItem, setCartIncludesItem] = useState(false)
+
     const addProductToCart = (product, quantity) => {
         let productAddedToCart = cartListItems.find(cartItem => cartItem.id === product.id)
         let isInCart = cartListItems.includes(productAddedToCart)
         if(!isInCart) {
             product.quantity = quantity
             setCartListItems(cartListItems => [...cartListItems, product])
-        }else {
-            console.log('Este producto ya ha sido agregado al carrito')  
-        }      
+        }     
+    }
+
+    const productInCart = (product) => {
+        const productAdded = cartListItems.find(cartItem => cartItem.id === product.id)
+        let productExist = cartListItems.includes(productAdded)
+        return productExist
     }
     
     const cartItemsQuantity = () => {
@@ -49,7 +55,8 @@ const CartProvider = ({children}) => {
         clearCart,
         cartItemsQuantity,
         totalCartPrice,
-        changeQuantityOfProduct
+        changeQuantityOfProduct,
+        productInCart
     }
 
     return(
