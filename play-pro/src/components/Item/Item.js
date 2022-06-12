@@ -19,7 +19,7 @@ const Item = ({ id, title, price, stock, image }) => {
                 </Button>
             </div>
             <div className="card-body">
-                <img src={image} alt={`Producto ${title}`} />
+                <img src={`../${image}`} alt={`Imagen - ${title}`} />
             </div>
             <div className="card-footer">
                 <p className="card-title">{title}</p>

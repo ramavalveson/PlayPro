@@ -30,26 +30,28 @@
     width: 50%;
 }
 
-.data-title-detail-container {
-    display: flex;
-    justify-content: space-between;
+.item-ref {
+    font-size: 1rem;
+    color: #acacac;
+    text-align: right;
 }
 
-.data-title-detail-container h2 {
+.title-product-detail {
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-.data-title-detail-container p {
+.data-price-detail p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.data-price-detail p:last-child {
     font-size: 1rem;
     color: #acacac;
 }
 
-.data-price-detail p:first-child {
-    font-size: 1.5rem;
-}
-
-.data-price-detail p:last-child {
+.stock-product-detail {
     font-size: 1rem;
     color: #acacac;
 }

@@ -1,30 +1,34 @@
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 import { useState, useEffect } from 'react';
-import productsArray from '../../utils/productsMock';
 import Spinner from '../Spinner/Spinner';
 import { useParams } from 'react-router-dom';
+//Firestore
+import { collection, getDocs } from "firebase/firestore";
+import db from '../../utils/firebaseConfig';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loadingProducts, setLoadingProducts] = useState(true)
     const { categoryId } = useParams()
 
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productsArray)
-            }, 2000)
-        })
+    const getProducts = async () => {
+        const productsSnapshot = await getDocs(collection(db, "products"));
+        const productList = productsSnapshot.docs.map((doc => {
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        }))
+        return productList
     }
 
     useEffect(() => {
         setProducts([])
         setLoadingProducts(true)
         getProducts()
-        .then((res) => {
+        .then((products) => {
             setProducts([])
-            categoryId === undefined ? setProducts(res) : productsFilter(res)
+            categoryId === undefined ? setProducts(products) : productsFilter(products)
         })
         .catch((err) => {
             console.log(err)
