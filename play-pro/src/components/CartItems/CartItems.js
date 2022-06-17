@@ -42,7 +42,7 @@ const CartItems = () => {
                         <p>Total $ {item.price * item.quantity}</p>
                     </div>
                     <div className="delete-item-container">
-                        <IconButton onClick={() => removeItemFromCart(item.id)} aria-label="delete">
+                        <IconButton onClick={() => removeItemFromCart(item)} aria-label="delete">
                             <DeleteIcon />
                         </IconButton>
                     </div>

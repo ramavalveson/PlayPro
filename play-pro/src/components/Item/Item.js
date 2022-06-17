@@ -14,7 +14,7 @@ const Item = ({ id, title, price, stock, image, quantity }) => {
             <div>
                 <Button
                     variant="text"
-                    sx={{ fontSize: 12, backgroundColor: 'rgb(247, 247, 247)' }}>
+                    sx={{ fontSize: 12, backgroundColor: 'rgb(247, 247, 247)', boxShadow: '0.2rem 0.2rem 0.2rem #ccc' }}>
                     <Link className="button-detail-view" to={`/item/${id}`}>Ver Detalle</Link>
                 </Button>
             </div>
@@ -25,6 +25,7 @@ const Item = ({ id, title, price, stock, image, quantity }) => {
                 <p className="card-title">{title}</p>
                 <p className="card-price">${price}</p>
                 <Button 
+                    sx={{ boxShadow: '0.2rem 0.2rem 0.5rem rgb(131, 131, 131)' }}
                     variant="contained" 
                     onClick={() => addProductToCart(item, 1)} 
                     disabled={stock < 1} 

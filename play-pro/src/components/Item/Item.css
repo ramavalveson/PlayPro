@@ -2,6 +2,7 @@
     border: solid 0.1rem #ccc;
     padding: 0;
     height: 490px;
+    box-shadow: 0.5rem 0.5rem 0.5rem #ccc;
 }
 
 .button-detail-view {
