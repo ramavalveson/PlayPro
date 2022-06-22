@@ -18,13 +18,19 @@ const CartContainer = () => {
     const [showModal, setShowModal] = useState(false)
 
     const [success, setSuccess] = useState()
+
     const navigate = useNavigate()
+
+    const finishOrder = () => {
+        navigate('/')
+    }
 
     const [formValue, setFormValue] = useState({
         name: '',
         phone: '',
         email: ''
     })
+
     const [order, setOrder] = useState({
         buyer: {},
         items: cartListItems.map( item => {
@@ -34,21 +40,18 @@ const CartContainer = () => {
                 price: item.price,
             }
         } ),
-        total: Number(totalCartPrice())
+        total: totalCartPrice()
     })
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log(e.preventDefault())
         setOrder({...order, buyer: formValue})
         saveData({...order, buyer: formValue})
     }
 
     const handleChange = (e) => {
         setFormValue({...formValue, [e.target.name]: e.target.value})
-    }
-
-    const finishOrder = () => {
-        navigate('/')
     }
 
     const saveData = async (newOrder) => {
@@ -60,6 +63,7 @@ const CartContainer = () => {
 
     return (
         <div>
+            {console.log(order)}
             <h2 className="cart-title">Carrito de Compras</h2>
             <div className="cart-content">
                 {cartListItems.length === 0 &&

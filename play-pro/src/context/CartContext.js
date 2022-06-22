@@ -29,7 +29,8 @@ const CartProvider = ({children}) => {
     }
 
     const totalCartPrice = () => {
-        return cartListItems.reduce((acc, item) => ( acc + (item.quantity * item.price) ), 0)
+        let result = cartListItems.reduce((acc, item) => ( acc + (item.quantity * item.price) ), 0)
+        return Number(result)
     }
     
     const removeItemFromCart = (item) => {
