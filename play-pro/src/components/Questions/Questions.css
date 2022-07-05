@@ -1,0 +1,17 @@
+.questions-title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.questions-container {
+    width: 60%;
+    margin: 2% auto 2% auto;
+}
+
+.contact-link-container {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 5%;
+}

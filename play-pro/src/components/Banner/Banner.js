@@ -1,14 +1,14 @@
+import './Banner.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const SwiperSlider = ({ item }) => {
-    return (
-        <div>
-            {item.images ? (
-                <Swiper
+const Banner = () => {
+    return(
+        <div className="banner">
+            <Swiper
                     style={{
                         "--swiper-navigation-color": "#ccc",
                         "--swiper-pagination-color": "#ccc",
@@ -23,21 +23,14 @@ const SwiperSlider = ({ item }) => {
                     className="mySwiper2"
                 >
                     <SwiperSlide>
-                        <img src={`../${item.image}`} alt={item.title}/>
-                    </SwiperSlide>
-                    {item.images.map((image) => {
-                        return (
-                            <SwiperSlide>
-                                <img src={`../${image}`} alt={item.title}/>
-                            </SwiperSlide>
-                        )
-                    })}
-                </Swiper>
-            ) : (
-                <img src={`../${item.image}`} alt={`Imagen de ${item.title}`}/>
-            )}
-        </div >
+                        <img className="imagen" src={'../3-cuotas.png'} alt={'cuotas'} />
+                    </SwiperSlide> 
+                    <SwiperSlide>
+                        <img className="imagen" src={'../banner-deportes.png'} alt={'banner-deportes'} />
+                    </SwiperSlide> 
+            </Swiper>
+        </div>
     )
 }
 
-export default SwiperSlider
+export default Banner

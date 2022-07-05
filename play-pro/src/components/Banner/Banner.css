@@ -1,0 +1,10 @@
+.banner {
+    width: 100%;
+    margin: 5% auto;
+    border-top: solid 2px #ccc;
+    border-bottom: solid 2px #ccc;
+}
+
+.imagen {
+    width: 100%;
+}

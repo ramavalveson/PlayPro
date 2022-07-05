@@ -4,7 +4,15 @@ const Modal = ({handleClose, open, children, title}) => {
     return(
         <Dialog onClose={handleClose} open={open}>
             <DialogContent>
-                <DialogTitle>{title}</DialogTitle>
+                <DialogTitle 
+                    sx={{
+                        textAlign: 'center', 
+                        fontSize: 25, 
+                        fontWeight: 'bold'
+                    }}
+                >
+                    {title}
+                </DialogTitle>
                 {children}
             </DialogContent>
         </Dialog>

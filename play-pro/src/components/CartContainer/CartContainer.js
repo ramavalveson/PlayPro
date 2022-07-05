@@ -5,9 +5,8 @@ import CartItems from '../CartItems/CartItems'
 import Modal from '../Modal/Modal';
 import db from '../../utils/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
-import { addDoc, collection } from 'firebase/firestore'
-
-
+import { addDoc, collection } from 'firebase/firestore';
+import AlertMessage from '../Alert/Alert';
 import { Button, TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
@@ -18,6 +17,8 @@ const CartContainer = () => {
     const [showModal, setShowModal] = useState(false)
 
     const [success, setSuccess] = useState()
+
+    const [formComplete, setFormComplete] = useState(true)
 
     const navigate = useNavigate()
 
@@ -38,16 +39,22 @@ const CartContainer = () => {
                 id: item.id,
                 title: item.title,
                 price: item.price,
+                quantity: item.quantity
             }
         } ),
         total: totalCartPrice()
     })
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(e.preventDefault())
-        setOrder({...order, buyer: formValue})
-        saveData({...order, buyer: formValue})
+        if(formValue.name !== '' && formValue.phone !== '' && formValue.email !== '') {
+            e.preventDefault()
+            setOrder({...order, buyer: formValue})
+            saveData({...order, buyer: formValue})
+            setFormComplete(true)
+        }else {
+            e.preventDefault()
+            setFormComplete(false)
+        }
     }
 
     const handleChange = (e) => {
@@ -61,9 +68,13 @@ const CartContainer = () => {
         clearCart()
     }
 
+    const openForm = () => {
+        setShowModal(true)
+        setFormComplete(true)
+    }
+
     return (
         <div>
-            {console.log(order)}
             <h2 className="cart-title">Carrito de Compras</h2>
             <div className="cart-content">
                 {cartListItems.length === 0 &&
@@ -79,7 +90,7 @@ const CartContainer = () => {
                     <div className="cart-accions-button-container">
                         <Button
                             variant="contained"
-                            onClick={() => setShowModal(true)}
+                            onClick={() => openForm()}
                         >
                             Comprar Ahora
                         </Button>
@@ -108,10 +119,10 @@ const CartContainer = () => {
                 handleClose={() => setShowModal(false)}
             >
                 {success ? (
-                    <div>
-                        La order se genero con exito!
-                        Numero de orden: {success}
-                        <button onClick={finishOrder}>Aceptar</button>
+                    <div className="order-success">
+                        <p>La orden se genero con exito!</p>
+                        <p>Numero de orden: <span className="order-number">{success}</span></p>
+                        <Button onClick={finishOrder} variant="contained">Aceptar</Button>
                     </div>
                 ) : (
                     <form className="form-contact" onSubmit={handleSubmit}>
@@ -122,6 +133,7 @@ const CartContainer = () => {
                             variant="outlined"
                             value={formValue.name}
                             onChange={handleChange}
+                            margin="dense"
                         />
                         <TextField
                             id="outlined-basic"
@@ -130,6 +142,8 @@ const CartContainer = () => {
                             variant="outlined"
                             value={formValue.phone}
                             onChange={handleChange}
+                            margin="dense"
+                            type='text'
                         />
                         <TextField
                             id="outlined-basic"
@@ -138,8 +152,17 @@ const CartContainer = () => {
                             value={formValue.email}
                             variant="outlined"
                             onChange={handleChange}
+                            margin="dense"
                         />
-                        <button type="submit">Enviar</button>
+                        <Button variant="contained" type="submit" sx={{marginTop: 2}}>Enviar</Button>
+                        {formComplete === false && (
+                            <div className="alert-form-error">
+                                <AlertMessage 
+                                    type={'error'} 
+                                    message={'Completa el Formulario para Finalizar la Compra.'} 
+                                />
+                            </div>
+                        )}
                     </form>
                 )}
             </Modal>

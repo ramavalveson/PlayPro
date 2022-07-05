@@ -1,0 +1,43 @@
+.contact-form-container {
+    margin: 0 0 5% 0;
+}
+
+.contact-form-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #ccc;
+    box-shadow: 0.5rem 0.5rem 0.5rem #ccc;
+    padding: 2%;
+    border-radius: 10px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.input-form-contact {
+    width: 80%;
+}
+
+.question-success-container {
+    text-align: center;
+    margin-top: 2%;
+    border: solid 0.1rem #ccc;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0.5rem 0.5rem 0.5rem #ccc;
+}
+
+.question-success {
+    font-size: 1.5rem;
+}
+
+.question-success-number span {
+    font-weight: bold;
+}

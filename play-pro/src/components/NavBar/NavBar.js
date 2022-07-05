@@ -59,9 +59,9 @@ const NavBar = () => {
                                 'aria-labelledby': 'basic-button',
                             }}
                         >
-                            {linksMenuProducts.map( (cat) => {
+                            {linksMenuProducts.map( (cat, index) => {
                                 return(
-                                    <MenuItem 
+                                    <MenuItem key={index}
                                         className="category-buttons-container"
                                         onClick={handleClose}
                                         disableRipple 
@@ -96,7 +96,7 @@ const NavBar = () => {
                             disableRipple variant="text"
                             sx={{ fontSize: 15 }}
                         >
-                            <Link className="button-link" to="/frequentlyAskedQuestions">Preguntas Frecuentes</Link>
+                            <Link className="button-link" to="/frecuentlyAskedQuestions">Preguntas Frecuentes</Link>
                         </Button>
                     </li>
                 </ul>

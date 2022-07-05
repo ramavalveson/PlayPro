@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
         .finally( () => {
             setLoadingProducts(false)
         })
-    }, [])
+    }, [id])
 
     return (
         <div>

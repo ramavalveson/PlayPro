@@ -39,9 +39,9 @@ const CartProvider = ({children}) => {
     }
 
     const changeQuantityOfProduct = (itemId, value) => {
-        const itemToReduceQuantity = cartListItems.find(item => item.id === itemId);
-        itemToReduceQuantity.quantity = itemToReduceQuantity.quantity + value 
-        return setChangeQuantity(changeQuantity + value)     
+        const itemToChangeQuantity = cartListItems.find(item => item.id === itemId);
+        itemToChangeQuantity.quantity = itemToChangeQuantity.quantity + value 
+        setChangeQuantity(changeQuantity + value)   
     }
 
 
@@ -52,6 +52,7 @@ const CartProvider = ({children}) => {
 
     const data = {
         cartListItems,
+        setCartListItems,
         addProductToCart,
         removeItemFromCart,
         clearCart,

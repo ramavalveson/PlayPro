@@ -47,3 +47,23 @@
     color: #fff;
     text-decoration: none;
 }
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5%;
+}
+
+.order-success {
+    text-align: center;
+}
+
+.order-number {
+    font-weight: bold;
+}
+
+.alert-form-error {
+    margin-top: 5%;
+}

@@ -1,0 +1,37 @@
+.footer {
+    background-color: rgb(202, 18, 18);
+    margin-top: auto;
+    padding-bottom: 4%;
+    box-shadow: 0 -0.2rem 0.5rem rgb(155, 155, 155);
+    border-top: solid 0.1rem rgb(110, 110, 110);
+}
+
+.footer-title {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    border-bottom: solid 0.1rem #ccc;
+    width: 80%;
+    padding: 2% 0 1% 0;
+    margin-bottom: 2%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-container div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-container img {
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.footer-container p {
+    font-weight: bold;
+}
