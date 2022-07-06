@@ -2,7 +2,7 @@
 
 PlayPro. is a project of an e-commerce that is oriented to the sale of high quality sports items. It is inspired by the need of people to practice sports with elements of high performance. 
 For its realization the dependency of the library "material ui" was installed, which was chosen with the motive of learning a library other than bootstrap, which until now was the only one I knew.
-To see how the app works, go to the following path: '/play-pro/public/prueba-app-playpro.gif'
+To see how the app works, go to the following path: '/play-pro/public/GIF/navegando-app-playpro.gif'
 
 # Getting Started with Create React App
 
